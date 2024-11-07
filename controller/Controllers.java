@@ -10,7 +10,7 @@ import Quiz1.views.ViewAll;
 public class Controllers {
     static Scanner scn = new Scanner(System.in);
 
-    public static void daftarTiket(){
+    public static void daftarTiket() {
 
         System.out.println("Pilih Type : \n1.Ekonomi \n2.Bisnis \n3.First Class");
         int pilihan = scn.nextInt();
@@ -53,6 +53,7 @@ public class Controllers {
     public static Bisnis inputDataBisnis() {
         Bisnis userBisnis = new Bisnis();
 
+        scn.nextLine();
         System.out.print("Nama : ");
         String nama = scn.nextLine();
         userBisnis.setNama(nama);
@@ -65,7 +66,7 @@ public class Controllers {
         int km = scn.nextInt();
         userBisnis.setKm(km);
 
-        System.out.println("Afirmasi (true/false) : ");
+        System.out.print("Afirmasi (true/false) : ");
         boolean afirmasi = scn.nextBoolean();
         userBisnis.setAfirmasi(afirmasi);
 
@@ -75,6 +76,7 @@ public class Controllers {
     public static FirstClass inputDataFirstClass() {
         FirstClass userFirstClass = new FirstClass();
 
+        scn.nextLine();
         System.out.print("Nama : ");
         String nama = scn.nextLine();
         userFirstClass.setNama(nama);
@@ -87,7 +89,7 @@ public class Controllers {
         int km = scn.nextInt();
         userFirstClass.setKm(km);
 
-        System.out.println("Asuransi (true/false) : ");
+        System.out.print("Asuransi (true/false) : ");
         boolean asuransi = scn.nextBoolean();
         userFirstClass.setAsuransi(asuransi);
 
